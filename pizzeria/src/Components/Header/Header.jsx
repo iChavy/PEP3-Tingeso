@@ -1,9 +1,12 @@
-import React, {useRef, useEffect} from "react";
+import React, { useRef, useEffect } from "react";
 import { Container } from "reactstrap";
 import logo from "../../assets/logo.png";
 import { NavLink } from "react-router-dom";
 
 import "../../assets/Header.css";
+import { useSelector, useDispatch } from "react-redux";
+
+import { cartUiActions } from "../../store/shopping-cart/cartUiSlice";
 
 const nav__links = [
   {
@@ -26,7 +29,11 @@ const nav__links = [
 const Header = () => {
   const menuRef = useRef(null);
   const headerRef = useRef(null);
+  const { totalQuanty } = useSelector((state) => state.cart.totalQuanty);
+  const dispatch = useDispatch();
+
   const toggleMenu = () => menuRef.current.classList.toggle("show__menu");
+  const toggleCart = () => dispatch(cartUiActions.toggle());
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -42,7 +49,7 @@ const Header = () => {
 
     return () => window.removeEventListener("scroll", null);
   }, []);
-  
+
   return (
     <header className="header" ref={headerRef}>
       <Container>
@@ -56,7 +63,6 @@ const Header = () => {
             <div className="menu d-flex align-items-center gap-5">
               {nav__links.map((item, index) => (
                 <NavLink
-                
                   to={item.path}
                   key={index}
                   className={(navClass) =>
@@ -71,9 +77,9 @@ const Header = () => {
 
           {/* === iconos navbar derecha== */}
           <div className="nav__right d-flex align-items-center gap-4">
-            <span className="cart__icon">
+            <span className="cart__icon" onClick={toggleCart}>
               <i className="ri-shopping-cart-2-line"></i>
-              <span className="cart__badge">2</span>
+              <span className="cart__badge">{totalQuanty}</span>
             </span>
 
             <span className="mobile__menu" onClick={toggleMenu}>

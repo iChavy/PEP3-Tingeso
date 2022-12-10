@@ -8,7 +8,7 @@
 }
 
 .titulo__delivery span {
-  color: #df2020;
+  color: #ffc107;
 }
 
 .contenido__delivery p {
@@ -27,21 +27,14 @@
 }
 
 .order__btn {
-  background: #df2020;
+  background: #ffc107;
   color: #fff;
   transition: 0.3s;
 }
 
 .order__btn:hover {
-  background: #212245;
-}
-.all__foods-btn {
-  background: transparent;
-  border: 1px solid #df2020 !important;
+  background: #7d80c5;
 }
 
-.all__foods-btn a {
-  color: #df2020;
-}
 
 

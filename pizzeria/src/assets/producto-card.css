@@ -1,8 +1,7 @@
 .product__item {
-  border: 5px solid #fde4e4;
-  text-align: center;
+  border: 5px solid #ffffff42;
+  text-align: left;
   padding: 30px;
-  cursor: pointer;
 }
 
 .product__img {
@@ -11,7 +10,7 @@
 }
 
 .product__img img {
-  width: 100%;
+  width: 100px;
   height: 200px;
   object-fit: cover;
 }
@@ -36,8 +35,8 @@
 
 .addTOCart__btn {
   border: none;
-  padding: 7px 25px;
-  background: #df2020;
+  padding: 7px 10px;
+  background: #ffc107;
   color: #fff;
   border-radius: 5px;
   font-size: 0.9rem;

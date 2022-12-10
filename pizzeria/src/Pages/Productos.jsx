@@ -56,7 +56,7 @@ const Productos = () => {
 
             <Col lg="12">
               <div className="food__categoria d-flex align-items-center justify-content-center gap-5">
-                <button className="all__btn foodBtnActive"  onClick={()=>setCategoria('TODOS')}>Todos</button>
+                <button className="all__btn"  onClick={()=>setCategoria('TODOS')}>Todos</button>
                 <button className="d-flex align-items-center justify-content-center gap-2" onClick={()=>setCategoria('PIZZAS')}>
                   <img src={pizzaImg} alt="piza-img" />
                   Pizzas

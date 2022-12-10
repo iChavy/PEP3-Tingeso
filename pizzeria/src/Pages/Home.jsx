@@ -5,8 +5,8 @@ import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 
 import "../assets/Home.css";
-import "../assets/seccion-delivery.css"
-import Category from "../Components/UI/category/category.jsx";
+import "../assets/seccion-delivery.css";
+// import Category from "../Components/UI/category/category.jsx";
 
 const Home = () => {
   return (
@@ -31,12 +31,10 @@ const Home = () => {
                     Pedir ahora<i className="ri-arrow-right-s-line"></i>
                   </button>
 
-                  <button className="all__foods-btn">
+                  <button className="order__btn">
                     <Link to="/productos">Ver productos</Link>
                   </button>
                 </div>
-
-                
               </div>
             </Col>
 
@@ -49,9 +47,9 @@ const Home = () => {
         </Container>
       </section>
 
-      <section>
+      {/* <section>
         <Category />
-      </section>
+      </section> */}
     </Helmet>
   );
 };

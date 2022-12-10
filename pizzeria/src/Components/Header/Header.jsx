@@ -79,7 +79,7 @@ const Header = () => {
           <div className="nav__right d-flex align-items-center gap-4">
             <span className="cart__icon" onClick={toggleCart}>
               <i className="ri-shopping-cart-2-line"></i>
-              <span className="cart__badge">{totalQuanty}</span>
+              <span>{totalQuanty}</span>
             </span>
 
             <span className="mobile__menu" onClick={toggleMenu}>

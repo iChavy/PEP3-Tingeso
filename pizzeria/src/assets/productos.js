@@ -6,7 +6,7 @@ const productos = [
     imagen:
       "https://previews.123rf.com/images/suwanneere/suwanneere0702/suwanneere070200008/798578-una-pizza-con-tocino-pepperoni-salchicha-y-jam%C3%B3n-aislados-.jpg",
     categoria: "bebestible",
-    descripcion: "Ingredientes: Jamón, Carne, Salchicha, Pepperoni",
+    descripcion: "Ingredientes: Jamón, Carne, Salchicha y Pepperoni",
   },
 
   {
@@ -27,7 +27,7 @@ const productos = [
     imagen:
       "https://www.recetin.com/wp-content/uploads/2015/05/pizza_hawaiana.jpg.webp",
     categoria: "pizza",
-    descripcion: "Ingredientes: Pollo, Jamón, Piña",
+    descripcion: "Ingredientes: Pollo, Jamón y Piña",
   },
 
   {

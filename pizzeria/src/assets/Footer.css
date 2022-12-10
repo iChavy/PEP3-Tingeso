@@ -1,0 +1,53 @@
+.footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: hsl(60, 86%, 94%);
+}
+
+.footer__logo img {
+  width: calc(100% - 40%);
+  margin-bottom: 10px;
+}
+
+.footer__logo h5 {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.footer__logo p {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 28px;
+}
+
+.delivery__time-item {
+  background: transparent !important;
+}
+
+.delivery__time-item span {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #212245;
+}
+
+.delivery__time-item p {
+  color: #212245;
+}
+.footer__title {
+  font-size: 1.1rem;
+  color: #212245;
+  font-weight: 600;
+}
+
+.social__links span i {
+  padding: 5px;
+  background: transparent;
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+}
+
+.copyright__text {
+  font-size: 0.8rem;
+  color: hsl(0, 0%, 0%);
+}

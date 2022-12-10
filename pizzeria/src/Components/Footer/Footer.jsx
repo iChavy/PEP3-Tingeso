@@ -25,10 +25,10 @@ const Footer = () => {
             </ListGroup>
         </Col>
         <Col>
-            <h5 className="footer__title">Contact</h5>
+            <h5 className="footer__title">Contacto</h5>
             <ListGroup >
               <ListGroupItem className=" delivery__time-item border-0 ps-0">
-                <p>Location: ZindaBazar, Sylhet-3100, Bangladesh</p>
+                <p>Casa central: Santiago centro, Santiago, Chile</p>
               </ListGroupItem>
               <ListGroupItem className=" delivery__time-item border-0 ps-0">
                 <span>Teléfono: +56912345678</span>
@@ -70,7 +70,7 @@ const Footer = () => {
         <Row className="mt-5">
           <Col>
             <p className="copyright__text d-flex align-items-center gap-4 justify-content-center">
-              Copyright - 2022, Sitio web hecho por Xavier Muñoz Díaz. Todos los derechos reservados.
+              Copyright - 2022, Sitio web hecho por Xavier Muñoz Díaz. Todos los derechos reservados. Agradecimientos al youtuber "Coding With Muhib"
             </p>
           </Col>
           </Row>

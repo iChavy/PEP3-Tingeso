@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   cartItems: [],
-  totalQuanty: 100000,
+  totalQuanty: 0,
   totalAmount: 0,
 };
 
@@ -77,6 +77,14 @@ const cartSlice = createSlice({
         0
       );
     },
+
+    // =========== vaciar carrito ===========
+    vaciarCarrito(state) {
+      state.cartItems = [];
+      state.totalQuantity = 0;
+      state.totalAmount = 0;
+    }
+
   },
 });
 

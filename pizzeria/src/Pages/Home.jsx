@@ -23,7 +23,7 @@ const Home = () => {
 
                 <p>
                   Pide por la página web y recibe tu pedido en la puerta de tu
-                  casa sin costo adicional para pedidos sobre $30.000
+                  casa
                 </p>
 
                 <div className="delivery__btns d-flex align-items-center gap-5 mt-4">

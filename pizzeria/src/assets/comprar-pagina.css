@@ -1,0 +1,40 @@
+.checkout__bill {
+  background: #ffc107;
+  padding: 30px;
+}
+
+.checkout__total {
+  border-top: 1px solid #ddd;
+  padding-top: 30px;
+}
+
+.form__group {
+  margin-bottom: 30px;
+}
+.form__group input,
+.form__group textarea {
+  width: 100%;
+  background: transparent;
+  padding: 7px 20px;
+  border: none;
+  border-bottom: 1px solid #2122454c;
+}
+
+.form__group input:focus,
+.form__group textarea:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .checkout__bill h6 {
+    font-size: 0.9rem;
+  }
+  .checkout__bill {
+    margin-top: 40px;
+  }
+
+  .form__group input::placeholder,
+  .form__group textarea::placeholder {
+    font-size: 0.8rem;
+  }
+}

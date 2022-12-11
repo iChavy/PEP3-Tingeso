@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Container, Row, Col } from "reactstrap";
 import Helmet from "../Components/Helmet/Helmet.js";
@@ -7,7 +7,12 @@ import { cartActions } from "../store/shopping-cart/cartSlice";
 
 import "../assets/comprar-pagina.css";
 
+
+
 const Comprar = () => {
+
+
+ 
   const dispatch = useDispatch();
 
   const vaciarCarrito = () => {
@@ -100,7 +105,11 @@ const Comprar = () => {
                   <Link to="/productos">Volver a productos</Link>
                 </button>
 
-                <button type="submit" className="addTOCart__btn" onClick={vaciarCarrito}>
+                <button
+                  type="submit"
+                  className="addTOCart__btn"
+                  onClick={vaciarCarrito}
+                >
                   <Link to="/pago">Pagar</Link>
                 </button>
               </form>
@@ -122,6 +131,13 @@ const Comprar = () => {
                     Total: <span>${totalAmount}</span>
                   </h5>
                 </div>
+              </div>
+              <br />
+
+              <div className="d-flex align-items-center justify-content-between">
+                <button className="addTOCart__btn me-4">Nada</button>
+                <button className="addTOCart__btn me-4">5%</button>
+                <button className="addTOCart__btn me-4">10%</button>
               </div>
             </Col>
           </Row>

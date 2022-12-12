@@ -19,10 +19,7 @@ const nav__links = [
     display: "Productos",
     path: "/productos",
   },
-  {
-    display: "Contacto",
-    path: "/contacto",
-  },
+
   {
     display: "Carrito",
     path: "/carro",

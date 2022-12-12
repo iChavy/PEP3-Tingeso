@@ -17,7 +17,7 @@ const Footer = () => {
             </div>
           </Col>
           <Col>
-            <h5 className="footer__title">Horario de delivery</h5>
+            <h5 className="footer__title">Horario atención y de delivery</h5>
             <ListGroup>
               <ListGroupItem className=" delivery__time-item border-0 ps-0">
                 <span>Lunes - Domingo</span>

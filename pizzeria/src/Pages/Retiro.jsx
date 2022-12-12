@@ -23,7 +23,11 @@ const Retiro = () => {
                 <button className="addTOCart__btn me-4">
                   <Link to="/datos-delivery"> Despacho a domicilio</Link>
                 </button>
+                <button className="volver__btn">
+                      <Link to="/carro">Volver</Link>
+                    </button>
               </div>
+              
               <br /> <br /> <br />
             </Col>
           </Row>

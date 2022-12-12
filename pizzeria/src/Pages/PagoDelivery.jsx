@@ -22,8 +22,7 @@ const PagoDelivery = () => {
                 El comprobante fue enviado al correo ingresado, gracias por tu
                 compra
               </h5>
-              <br />
-              <br />
+
             </Col>
           </Row>
         </Container>

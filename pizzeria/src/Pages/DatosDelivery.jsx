@@ -33,7 +33,7 @@ const DatosDelivery = () => {
   };
 
   return (
-    <Helmet title="Comprar">
+    <Helmet title="Ingresar datos">
       <section>
         <Container>
           <Row>

@@ -13,9 +13,9 @@
 }
 .form__group input,
 .form__group textarea {
-  width: 100%;
+  width: 70%;
   background: transparent;
-  padding: 7px 20px;
+  padding: 7px 10px;
   border: none;
   border-bottom: 1px solid #2122454c;
 }

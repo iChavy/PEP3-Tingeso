@@ -8,16 +8,19 @@ import { cartActions } from "../store/shopping-cart/cartSlice";
 import "../assets/comprar-pagina.css";
 
 const Comprar = () => {
+  // accede al store para actualizar estados
   const dispatch = useDispatch();
 
   const vaciarCarrito = () => {
     dispatch(cartActions.vaciarCarrito());
   };
 
+  //extrae el subtotal de los productos del carrito
   const cartTotalAmount = useSelector((state) => state.cart.totalAmount);
   const costoEnvio = 5000;
   const datosEnvio = [];
 
+  // cambiar el valor de los inputs
   const [ingresarNombre, setIngresarNombre] = useState("");
   const [ingresarEmail, setIngresarEmail] = useState("");
   const [ingresarTelefono, setIngresarTelefono] = useState("");
@@ -25,8 +28,10 @@ const Comprar = () => {
   const [ingresarComuna, setIngresarComuna] = useState("");
   const [tip, setTip] = useState(0);
 
+  // calculo del total a pagar
   const totalAmount = cartTotalAmount + tip + Number(costoEnvio);
 
+  // manejo de errores para que los campos no queden en blanco
   const submitHandler = (e) => {
     e.preventDefault();
     const datosEnvioUsuario = {
@@ -48,6 +53,7 @@ const Comprar = () => {
           <Row>
             <Col lg="12" className="text-center">
               <h2>Proceso de compra</h2>
+              <br />
               <br />
             </Col>
 
@@ -95,7 +101,7 @@ const Comprar = () => {
                     onChange={(e) => setIngresarComuna(e.target.value)}
                   />
                 </div>
-                <button className="addTOCart__btn me-4">
+                <button className="volver__btn me-4">
                   <Link to="/productos">Volver a productos</Link>
                 </button>
 
@@ -183,6 +189,7 @@ const Comprar = () => {
               </div>
             </Col>
           </Row>
+         
         </Container>
       </section>
     </Helmet>

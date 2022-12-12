@@ -6,6 +6,12 @@ import Home from '../Pages/Home'
 import Productos from '../Pages/Productos'
 import Comprar from '../Pages/Comprar'
 import Carro from '../Pages/Carro'
+import Retiro from '../Pages/Retiro'
+import ComprarTienda from '../Pages/ComprarTienda'
+import ComprarDelivery from '../Pages/ComprarDelivery'
+import Pago from '../Pages/Pago'
+import PagoDelivery from '../Pages/PagoDelivery'
+import DatosDelivery from '../Pages/DatosDelivery'
 
 const Rutas = () => {
   return <Routes>
@@ -14,6 +20,13 @@ const Rutas = () => {
     <Route path="/productos" element={<Productos />} />
     <Route path="/comprar" element={<Comprar />} />
     <Route path="/carro" element={<Carro />} />
+    <Route path="/retiro-delivery" element={<Retiro />} />
+    <Route path="/comprar-tienda" element={<ComprarTienda />} />
+    <Route path="/comprar-delivery" element={<ComprarDelivery />} />
+    <Route path="/datos-delivery" element={<DatosDelivery />} />
+    <Route path="/pago" element={<Pago />} />
+    <Route path="/pago-delivery" element={<PagoDelivery />} />
+
    </Routes> 
 }
 

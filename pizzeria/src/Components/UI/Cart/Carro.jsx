@@ -39,7 +39,7 @@ const Carro = () => {
             Subtotal : <span>${totalAmount}</span>
           </h6>
           <button>
-            <Link to="/comprar">Comprar</Link>
+            <Link to="/retiro-delivery">Comprar</Link>
           </button>
         </div>
       </ListGroup>

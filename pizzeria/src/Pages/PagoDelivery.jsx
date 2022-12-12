@@ -3,9 +3,9 @@ import { Container, Row, Col } from "reactstrap";
 
 import Helmet from "../Components/Helmet/Helmet.js";
 
-const Pago = () => {
+const PagoDelivery = () => {
   return (
-    <Helmet title="Pago">
+    <Helmet title="Pago tienda">
       <section>
         <Container>
           <Row>
@@ -17,7 +17,11 @@ const Pago = () => {
               <br />
               <br />
               <br />
-              <br /> <h5>Gracias por tu compra!</h5>
+              <br />{" "}
+              <h5>
+                El comprobante fue enviado al correo ingresado, gracias por tu
+                compra
+              </h5>
               <br />
               <br />
             </Col>
@@ -28,4 +32,4 @@ const Pago = () => {
   );
 };
 
-export default Pago;
+export default PagoDelivery;

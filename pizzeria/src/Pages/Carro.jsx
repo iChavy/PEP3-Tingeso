@@ -52,7 +52,7 @@ const Carro = () => {
                     <Link to="/productos">Volver a Productos</Link>
                   </button>
                   <button className="addTOCart__btn">
-                    <Link to="/comprar">Continuar con la compra</Link>
+                    <Link to="/retiro-delivery">Continuar con la compra</Link>
                   </button>
                 </div>
               </div>

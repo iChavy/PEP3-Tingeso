@@ -1,5 +1,4 @@
-
-import React, {useEffect } from "react";
+import React, { useEffect } from "react";
 import Helmet from "../Components/Helmet/Helmet.js";
 import { Container, Row, Col } from "reactstrap";
 
@@ -15,6 +14,7 @@ const Productos = () => {
   const [categoria, setCategoria] = React.useState("all");
   const [allProductos, setAllProductos] = React.useState(productos);
 
+  // se ejecuta cuando se actualiza el estado de categoria
   useEffect(() => {
     if (categoria === "TODOS") {
       setAllProductos(productos);
@@ -56,17 +56,31 @@ const Productos = () => {
 
             <Col lg="12">
               <div className="food__categoria d-flex align-items-center justify-content-center gap-5">
-                <button className="all__btn"  onClick={()=>setCategoria('TODOS')}>Todos</button>
-                <button className="d-flex align-items-center justify-content-center gap-2" onClick={()=>setCategoria('PIZZAS')}>
+                <button
+                  className="all__btn"
+                  onClick={() => setCategoria("TODOS")}
+                >
+                  Todos
+                </button>
+                <button
+                  className="d-flex align-items-center justify-content-center gap-2"
+                  onClick={() => setCategoria("PIZZAS")}
+                >
                   <img src={pizzaImg} alt="piza-img" />
                   Pizzas
                 </button>
-                <button className="d-flex align-items-center justify-content-center gap-2" onClick={()=>setCategoria('BEBESTIBLES')}>
+                <button
+                  className="d-flex align-items-center justify-content-center gap-2"
+                  onClick={() => setCategoria("BEBESTIBLES")}
+                >
                   {" "}
                   <img src={bebestiblesImg} alt="bebestibles-img" />
                   Bebestibles
                 </button>
-                <button className="d-flex align-items-center justify-content-center gap-2" onClick={()=>setCategoria('SALSAS')}>
+                <button
+                  className="d-flex align-items-center justify-content-center gap-2"
+                  onClick={() => setCategoria("SALSAS")}
+                >
                   {" "}
                   <img src={salsasImg} alt="salsas-img" />
                   Salsas
@@ -75,7 +89,7 @@ const Productos = () => {
             </Col>
 
             {allProductos.map((item) => (
-              <Col lg="3" md="4" sm="6" xs="6"  key={item.id} className='mt-5'>
+              <Col lg="3" md="4" sm="6" xs="6" key={item.id} className="mt-5">
                 <ProductoCard item={item} />
               </Col>
             ))}

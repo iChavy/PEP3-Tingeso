@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Container, Row, Col } from "reactstrap";
 import Helmet from "../Components/Helmet/Helmet.js";
@@ -7,12 +7,7 @@ import { cartActions } from "../store/shopping-cart/cartSlice";
 
 import "../assets/comprar-pagina.css";
 
-
-
 const Comprar = () => {
-
-
- 
   const dispatch = useDispatch();
 
   const vaciarCarrito = () => {
@@ -20,18 +15,17 @@ const Comprar = () => {
   };
 
   const cartTotalAmount = useSelector((state) => state.cart.totalAmount);
-  const propina = 0.05;
   const costoEnvio = 5000;
   const datosEnvio = [];
-
-  const propinaRepartidor = cartTotalAmount * Number(propina);
-  const totalAmount = cartTotalAmount + propinaRepartidor + Number(costoEnvio);
 
   const [ingresarNombre, setIngresarNombre] = useState("");
   const [ingresarEmail, setIngresarEmail] = useState("");
   const [ingresarTelefono, setIngresarTelefono] = useState("");
   const [ingresarRegion, setIngresarRegion] = useState("");
   const [ingresarComuna, setIngresarComuna] = useState("");
+  const [tip, setTip] = useState(0);
+
+  const totalAmount = cartTotalAmount + tip + Number(costoEnvio);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -124,7 +118,7 @@ const Comprar = () => {
                   Costo de envío: <span>${costoEnvio}</span>
                 </h6>
                 <h6 className="d-flex align-items-center justify-content-between mb-3">
-                  Propina: <span>${propinaRepartidor}</span>
+                  Propina: <span>${tip.toFixed(2)}</span>
                 </h6>
                 <div className="checkout__total">
                   <h5 className="d-flex align-items-center justify-content-between">
@@ -135,9 +129,57 @@ const Comprar = () => {
               <br />
 
               <div className="d-flex align-items-center justify-content-between">
-                <button className="addTOCart__btn me-4">Nada</button>
-                <button className="addTOCart__btn me-4">5%</button>
-                <button className="addTOCart__btn me-4">10%</button>
+                <button
+                  className="addTOCart__btn me-4"
+                  onClick={() => setTip(0)}
+                >
+                  Nada
+                </button>
+                <button
+                  className="addTOCart__btn me-4"
+                  onClick={() => setTip(cartTotalAmount * 0.05)}
+                >
+                  5%
+                </button>
+                <button
+                  className="addTOCart__btn me-4"
+                  onClick={() => setTip(cartTotalAmount * 0.1)}
+                >
+                  10%
+                </button>
+              </div>
+              <br />
+
+              <div>
+                <button
+                  className="addTOCart__btn me-4"
+                  type="submit"
+                  onClick={vaciarCarrito}
+                >
+                  <Link to="/pago"> Pagar con efectivo</Link>
+                </button>
+              </div>
+              <br />
+
+              <div>
+                <button
+                  className="addTOCart__btn me-4"
+                  type="submit"
+                  onClick={vaciarCarrito}
+                >
+                  <Link to="/pago"> Pagar con tarjeta de credito</Link>
+                </button>
+              </div>
+              <br />
+
+              <div>
+                <button
+                  className="addTOCart__btn me-4"
+                  type="submit"
+                  onClick={vaciarCarrito}
+                >
+                  <Link to="/pago"> Pagar con tarjeta de debito</Link>
+                </button>
               </div>
             </Col>
           </Row>

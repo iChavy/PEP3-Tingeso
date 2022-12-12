@@ -1,7 +1,39 @@
-.foodBtnActive {
-  background: #fff !important;
+.contenido__delivery {
+  padding-top: 70px;
+}
+
+.titulo__delivery {
+  font-size: 2.5rem;
+  line-height: 55px;
+}
+
+.titulo__delivery span {
+  color: #ffc107;
+}
+
+.contenido__delivery p {
+  font-size: 1rem;
+  line-height: 30px;
+  color: #777;
+}
+
+.delivery__btns button {
+  border: none;
+  outline: none;
+  padding: 7px 20px;
   border-radius: 5px;
-  color: #df2020 !important;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.order__btn {
+  background: #ffc107;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.order__btn:hover {
+  background: #7d80c5;
 }
 
 @media only screen and (max-width: 768px) {
@@ -26,10 +58,15 @@
 }
 @media only screen and (max-width: 576px) {
   .contenido__delivery {
-    text-align: center;
+    text-align: left;
+  }
+
+  .titulo__delivery {
+    font-size: 1.5rem;
+    line-height: 30px;
   }
 
   .delivery__btns {
-    justify-content: center;
+    justify-content: left;
   }
 }

@@ -12,13 +12,9 @@
 .footer__logo h5 {
   font-weight: 600;
   font-size: 1rem;
+  margin-top: auto;
   margin-bottom: 10px;
-}
-
-.footer__logo p {
-  font-size: 0.9rem;
-  color: #333;
-  line-height: 28px;
+  margin-left: 30px;
 }
 
 .delivery__time-item {
@@ -50,4 +46,25 @@
 .copyright__text {
   font-size: 0.8rem;
   color: hsl(0, 0%, 0%);
+}
+
+
+@media only screen and (max-width: 992px) {
+  .footer__logo h5 {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: auto;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer__logo h5 {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+  }
 }

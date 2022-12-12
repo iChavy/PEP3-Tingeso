@@ -13,7 +13,7 @@ const Carro = () => {
   const totalAmount = useSelector((state) => state.cart.totalAmount);
 
   const toggleCart = () => {
-    dispatch(cartUiActions.toggle());
+    dispatch(cartUiActions.alternar());
   };
   return (
     <div className="cart__container">

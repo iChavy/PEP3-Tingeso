@@ -1,10 +1,12 @@
 import React, { useRef, useEffect } from "react";
 import { Container } from "reactstrap";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/imagenes/logo.png";
+// Sirve para saber en que ruta estamos, lo muestra en el navbar
 import { NavLink } from "react-router-dom";
 
 import "../../assets/Header.css";
-import { useSelector, useDispatch } from "react-redux";
+// sirve para actualizar estados
+import { useDispatch } from "react-redux";
 
 import { cartUiActions } from "../../store/shopping-cart/cartUiSlice";
 
@@ -26,15 +28,19 @@ const nav__links = [
     path: "/carro",
   },
 ];
+
 const Header = () => {
+  // devuelve un objeto mutable
   const menuRef = useRef(null);
   const headerRef = useRef(null);
-  const { totalQuanty } = useSelector((state) => state.cart.totalQuanty);
+  // accede al store para actualizar estados
   const dispatch = useDispatch();
 
-  const toggleMenu = () => menuRef.current.classList.toggle("show__menu");
-  const toggleCart = () => dispatch(cartUiActions.toggle());
+  // muestra y oculta el menu en mobile
+  const mostrarMenu = () => menuRef.current.classList.toggle("show__menu");
+  const mostrarCarro = () => dispatch(cartUiActions.alternar());
 
+  // menú desplegable en mobile
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (
@@ -59,8 +65,9 @@ const Header = () => {
             <h5>Pizzeria Pudú</h5>
           </div>
           {/* === menu == */}
-          <div className="navigation" ref={menuRef} onClick={toggleMenu}>
+          <div className="navigation" ref={menuRef} onClick={mostrarMenu}>
             <div className="menu d-flex align-items-center gap-5">
+              {/* devuelve una matriz para acceder a sus datos */}
               {nav__links.map((item, index) => (
                 <NavLink
                   to={item.path}
@@ -77,12 +84,11 @@ const Header = () => {
 
           {/* === iconos navbar derecha== */}
           <div className="nav__right d-flex align-items-center gap-4">
-            <span className="cart__icon" onClick={toggleCart}>
+            <span className="cart__icon" onClick={mostrarCarro}>
               <i className="ri-shopping-cart-2-line"></i>
-              <span>{totalQuanty}</span>
             </span>
-
-            <span className="mobile__menu" onClick={toggleMenu}>
+            {/* icono menú en mobile */}
+            <span className="mobile__menu" onClick={mostrarMenu}>
               <i className="ri-menu-line"></i>
             </span>
           </div>

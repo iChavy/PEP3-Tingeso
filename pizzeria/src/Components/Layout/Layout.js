@@ -8,7 +8,9 @@ import Carro from "../UI/Cart/Carro.jsx";
 import { useSelector } from "react-redux";
 
 const Layout = () => {
+  // Extrae el estado de mostrar el carrito
   const showCart = useSelector((state) => state.cartUi.cartIsVisible);
+
   return (
     <div>
       <Header />

@@ -5,8 +5,9 @@ const cartUiSlice = createSlice({
   name: "cartUi",
   initialState: { cartIsVisible: false },
 
+  // Recibe el estado actual y la funcion a realizar. Devuelve un nuevo estado
   reducers: {
-    toggle(state) {
+    alternar(state) {
       state.cartIsVisible = !state.cartIsVisible;
     },
   },

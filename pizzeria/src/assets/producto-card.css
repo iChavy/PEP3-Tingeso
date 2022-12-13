@@ -50,6 +50,11 @@
   font-size: 0.9rem;
 }
 @media only screen and (max-width: 768px) {
+  .product__img img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+  }
   .product__content h5 a {
     font-size: 0.8rem;
   }
@@ -60,9 +65,15 @@
     padding: 5px 15px;
     font-size: 0.7rem;
   }
+  
 
 }
 @media only screen and (max-width: 576px) {
+  .product__img img {
+    width: 50px;
+    height: 110px;
+    object-fit: cover;
+  }
   .addTOCart__btn {
     margin-left: 20px;
     border: none;

@@ -55,7 +55,7 @@ const Productos = () => {
             </Col>
 
             <Col lg="12">
-              <div className="food__categoria d-flex align-items-center justify-content-center gap-5">
+              <div className="food__categoria d-flex align-items-center justify-content-center">
                 <button
                   className="all__btn"
                   onClick={() => setCategoria("TODOS")}

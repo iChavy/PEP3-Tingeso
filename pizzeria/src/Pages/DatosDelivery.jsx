@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import "../assets/comprar-pagina.css";
 
 const DatosDelivery = () => {
-
-
   const datosEnvio = [];
 
   // cambiar el valor de los inputs
@@ -32,6 +30,33 @@ const DatosDelivery = () => {
     console.log(datosEnvio);
   };
 
+  // Se utiliza para verificar que los campos no estén vacíos
+  const verify_data = () => {
+    if (ingresarNombre === "") {
+      return 0;
+    }
+    if (ingresarEmail === "") {
+      return 0;
+    }
+    if (ingresarTelefono === "") {
+      return 0;
+    }
+    if (ingresarRegion === "") {
+      return 0;
+    }
+    if (ingresarComuna === "") {
+      return 0;
+    } else {
+      return 1;
+    }
+  };
+  console.log(
+    ingresarNombre,
+    ingresarEmail,
+    ingresarTelefono,
+    ingresarRegion,
+    ingresarComuna
+  );
   return (
     <Helmet title="Ingresar datos">
       <section>
@@ -65,7 +90,7 @@ const DatosDelivery = () => {
                 </div>
                 <div className="form__group">
                   <input
-                    type="number"
+                    type="text"
                     placeholder="Ingresa tu número de teléfono"
                     required
                     onChange={(e) => setIngresarTelefono(e.target.value)}
@@ -92,7 +117,11 @@ const DatosDelivery = () => {
                 </button>
 
                 <button type="submit" className="addTOCart__btn">
-                  <Link to="/comprar-delivery">Enviar</Link>
+                  {verify_data() === 1 ? (
+                    <Link to="/comprar-delivery">Enviar</Link>
+                  ) : (
+                    "Enviar"
+                  )}
                 </button>
               </form>
             </Col>

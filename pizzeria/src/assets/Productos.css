@@ -2,7 +2,7 @@
   background: #ffc107;
   text-align: center;
   margin-top: 30px;
-  padding: 10px 0px;
+  padding: 10px;
   border-radius: 8px;
 }
 
@@ -25,17 +25,26 @@
   color: #df2020 !important;
 }
 
-
 @media only screen and (max-width: 768px) {
-
   .food__categoria {
     background: #ffc107;
     text-align: center;
     margin-top: 30px;
-
+    padding: 10px;
     border-radius: 8px;
   }
 }
 @media only screen and (max-width: 576px) {
+  .food__categoria button {
+    border: none;
+    outline: none;
+    padding: 7px;
+    background: transparent;
+    color: #fff;
+  }
 
+  .food__categoria button img {
+    width: 20px;
+    height: 20px;
+  }
 }
